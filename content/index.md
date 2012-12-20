@@ -1,13 +1,17 @@
 ---
-title: Home
+title: Writings and Projects of Danilo Braband
 ---
 
-# A Brand New nanoc Site
+# dab.io
 
-You’ve just created a new nanoc site. The page you are looking at right now is the home page for your site. To get started, consider replacing this default homepage with your own customized homepage. Some pointers on how to do so:
+These are the writings and projects of Danilo Braband. You can contact me at <a class="email">dbraband [at] gmail . com</a>.
 
-* __Change this page’s content__ by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
-* __Change the layout__, which is the “default.html” file in the “layouts” directory, and create something unique (and hopefully less bland).
-
-If you need any help with customizing your nanoc web site, be sure to check out the documentation (see sidebar), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
+<% sorted_projects.each do |p| %>
+<% if p[:url] %>
+<h3><a href="<%= p[:url] %>" title="<%= p[:title] %>"><%= p[:title] %></a></h3>
+<% else %>
+<h2><%= p[:title] %></h2>
+<% end %>
+<%= p.compiled_content %>
+<% end %>
 

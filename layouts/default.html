@@ -1,29 +1,16 @@
 <!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>A Brand New nanoc Site - <%= @item[:title] %></title>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title><%= @item[:title] %> - dab.io</title>
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+</head>
+<body>
 
-    <!-- you don't need to keep this, but it's cool for stats! -->
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
-  </head>
-  <body>
-    <div id="main">
-      <%= yield %>
-    </div>
-    <div id="sidebar">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="http://nanoc.stoneship.org/docs/">Documentation</a></li>
-        <li><a href="http://nanoc.stoneship.org/docs/3-getting-started/">Getting Started</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-        <li><a href="http://projects.stoneship.org/trac/nanoc/">Wiki</a></li>
-      </ul>
-    </div>
-  </body>
+    <section id="main">
+        <%= yield %>
+    </section>
+
+    <script>var _gauges=_gauges||[];(function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","507bc980613f5d27a6000002"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);for(var e,n,a=document.getElementsByClassName("email"),r=0,i=a.length;i>r;r++){if(e=a[r],!e.innerHTML)break;n=e.innerHTML.replace(" . ",".").replace(" [at] ","@"),e.href="mailto:"+n,e.innerHTML=n}})()</script>
+</body>
 </html>

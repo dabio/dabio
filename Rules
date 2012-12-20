@@ -13,16 +13,15 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # don’t filter or layout
-end
+compile '/stylesheet/' do; end
 
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
     filter :erb
-    filter :rdiscount
+    filter :redcarpet
+    filter :typogruby
     layout 'default'
   end
 end
