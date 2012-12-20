@@ -1,13 +1,15 @@
 all: server
 
-server:
-	rm -fR output/*
+server: clean
 	nanoc autocompile
+
+clean:
+	rm -fR tmp/ output/*
 
 install:
 	bundle install --binstubs --path vendor/gems --without production
 	@echo "Run: rbenv rehash"
 
-clean:
-	rm -fR output/* tmp/ bin/ vendor/ Gemfile.lock
+uninstall: clean
+	rm -fR tmp/ bin/ vendor/ Gemfile.lock
 

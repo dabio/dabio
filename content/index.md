@@ -2,8 +2,6 @@
 title: Writings and Projects of Danilo Braband
 ---
 
-# dab.io
-
 These are the writings and projects of Danilo Braband. You can contact me at <a class="email">dbraband [at] gmail . com</a>.
 
 <% sorted_projects.each do |p| %>

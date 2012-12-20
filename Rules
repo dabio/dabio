@@ -13,7 +13,8 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do; end
+compile '/static/*' do; end
+compile '/CNAME/' do; end
 
 compile '*' do
   if item.binary?
@@ -26,8 +27,12 @@ compile '*' do
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+route '/static/*' do
+  item.identifier[7..-2]
+end
+
+route '/CNAME/' do
+  '/CNAME'
 end
 
 route '*' do
