@@ -1,102 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
+/* Modular Scale
+ * ----------------------
+ * 15px @ 1:1.618
+ * 29px @ 1:1.618
+ *
+ * http://modularscale.com/scale/?px1=15&px2=29&ra1=1.618&ra2=0
+ * ----------------------*/
 
-  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
-}
-
+/* =Typography
+-----------------------------------------------------------------------------*/
 body {
-  background: #fff;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:link,
-a:visited {
-  color: #f30;
-}
-
-a:hover {
-  color: #f90;
-}
-
-#main {
-  position: absolute;
-
-  top: 40px;
-  left: 280px;
-
-  width: 500px;
-}
-
-#main h1 {
-  font-size: 40px;
-  font-weight: normal;
-
-  line-height: 40px;
-
-  letter-spacing: -1px;
-}
-
-#main p {
-  margin: 20px 0;
-  
+  margin-top: 48px;
+  margin-bottom: 32px;
+  color: #444;
+  font-family: 'Droid Serif', serif;
   font-size: 15px;
-  
-  line-height: 20px;
+}
+h1, h2, h3, h4, h5, h6 { color: #222; }
+h1 { font-size: 1.933em; }
+h2 { font-size: 1.618em; }
+h3 { font-size: 1.195em; }
+
+/* =Links
+-----------------------------------------------------------------------------*/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* =Layout
+-----------------------------------------------------------------------------*/
+#content,
+header#primary,
+footer#primary {
+  width: 800px;
+  padding: 0 10px;
+  margin: 24px auto;
 }
 
-#main ul, #main ol {
-  margin: 20px;
+
+/* =Header
+-----------------------------------------------------------------------------*/
+header#primary a { color: #222; }
+header#primary a:hover { text-decoration: none; }
+
+/* =Nav
+-----------------------------------------------------------------------------*/
+
+
+/* =Misc
+-----------------------------------------------------------------------------*/
+
+
+/* =Footer
+-----------------------------------------------------------------------------*/
+footer {
+  color: #999;
+  font-size: .738em;
+  text-align: center;
 }
-
-#main li {
-  font-size: 15px;
-  
-  line-height: 20px;
-}
-
-#main ul li {
-  list-style-type: square;
-}
-
-#sidebar {
-  position: absolute;
-
-  top: 40px;
-  left: 20px;
-  width: 200px;
-
-  padding: 20px 20px 0 0;
-
-  border-right: 1px solid #ccc;
-
-  text-align: right;
-}
-
-#sidebar h2 {
-  text-transform: uppercase;
-
-  font-size: 13px;
-
-  color: #333;
-
-  letter-spacing: 1px;
-
-  line-height: 20px;
-}
-
-#sidebar ul {
-  list-style-type: none;
-
-  margin: 20px 0;
-}
-
-#sidebar li {
-  font-size: 14px;
-
-  line-height: 20px;
-}
-

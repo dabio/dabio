@@ -1,14 +1,22 @@
 ---
 title: JSmin
-url: http://jsmin.de/
 created_at: 2012-12-19
 kind: project
 ---
 
-My first [Node.js][1] application. Uses [express][2] as framework and [UglifyJS][3] as javascript compressor. Basically it is just a web-interface for [UglifyJS][3]. You can [find the source on Github][4].
+<article class="row">
+<section class="twothird centered">
 
-  [1]: http://nodejs.org "node.js"
-  [2]: http://expressjs.com "Express - node.js web application framework"
-  [3]: https://github.com/mishoo/UglifyJS2 "JavaScript parser / mangler / compressor / beautifier toolkit"
-  [4]: https://github.com/dabio/min "dabio/min - JSmin on Github"
+### [JSmin][1]
+
+My first [Node.js][2] application. Uses [express][3] as framework and [UglifyJS][4] as javascript compressor. Basically it is just a web-interface for [UglifyJS][4]. You can [find the source on Github][5].
+
+</section>
+</article>
+
+  [1]: http://jsmin.de "JSmin"
+  [2]: http://nodejs.org "node.js"
+  [3]: http://expressjs.com "Express - node.js web application framework"
+  [4]: https://github.com/mishoo/UglifyJS2 "JavaScript parser / mangler / compressor / beautifier toolkit"
+  [5]: https://github.com/dabio/min "dabio/min - JSmin on Github"
 
