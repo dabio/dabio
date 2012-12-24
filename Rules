@@ -15,6 +15,12 @@
 
 compile '/static/*' do; end
 
+compile '/' do
+  filter :erb
+  filter :typogruby
+  layout 'default'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
