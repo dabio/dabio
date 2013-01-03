@@ -9,6 +9,7 @@
 /* =Typography
 -----------------------------------------------------------------------------*/
 body {
+  background: url(/img/cream_dust.png);
   margin-top: 48px;
   margin-bottom: 32px;
   color: #444;
