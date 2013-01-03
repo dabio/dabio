@@ -21,6 +21,13 @@ compile '/' do
   layout 'default'
 end
 
+compile '/projects/*' do
+  filter :erb
+  filter :redcarpet
+  filter :typogruby
+  layout 'project'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
