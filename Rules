@@ -50,4 +50,5 @@ route '*' do
   end
 end
 
+layout '/partials/*', :redcarpet
 layout '*', :erb

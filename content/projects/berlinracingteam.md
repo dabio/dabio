@@ -1,5 +1,6 @@
 ---
 title: Berlin Racing Team
+description: Berlin based cycling team.
 created_at: 2012-12-20
 kind: project
 ---

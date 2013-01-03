@@ -5,7 +5,7 @@ title: Writings and Projects of Danilo Braband
 <section class="row">
 <section class="twothird centered">
 
-    <p>These are the writings and projects of Danilo Braband. You can contact me at <a class="email">dbraband [at] gmail . com</a>.</p>
+    <%= render 'partials/about' %>
 
     <% if projects.length > 0 %>
 
@@ -17,6 +17,7 @@ title: Writings and Projects of Danilo Braband
                 <p><%= p[:description] %></p>
             </li>
         <% end %>
+        </ul>
     <% end %>
 
 </section>
