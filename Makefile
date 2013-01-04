@@ -12,4 +12,3 @@ install:
 
 uninstall: clean
 	rm -fR tmp/ bin/ vendor/ Gemfile.lock
-
