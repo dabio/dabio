@@ -2,23 +2,17 @@
 title: Writings and Projects of Danilo Braband
 ---
 
-<section class="row">
-<section class="twothird centered">
+<%= render 'partials/about' %>
 
-    <%= render 'partials/about' %>
+<% if projects.length > 0 %>
 
-    <% if projects.length > 0 %>
-
-        <h2>Projects</h2>
-        <ul>
-        <% sorted_projects.each do |p| %>
-            <li>
-                <a href="<%= p.path %>" title="<%= p[:description] %>"><%= p[:title] %></a>
-                <p><%= p[:description] %></p>
-            </li>
-        <% end %>
-        </ul>
+    <h2>Projects</h2>
+    <ul>
+    <% sorted_projects.each do |p| %>
+        <li>
+            <a href="<%= p.path %>" title="<%= p[:description] %>"><%= p[:title] %></a>
+            <p><%= p[:description] %></p>
+        </li>
     <% end %>
-
-</section>
-</section>
+    </ul>
+<% end %>

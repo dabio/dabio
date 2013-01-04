@@ -1,32 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset=utf-8>
-    <title><%= @item[:title] %> - dab.io</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic">
-    <link rel="stylesheet" href="/css/kube.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <%= render 'partials/head' %>
 </head>
 <body>
 
-    <header id="primary" class="row">
-        <h1 class="twothird centered"><a href="/" title="dab.io">dab.io</a></h1>
+    <header class="primary">
+        <h1><a href="/" title="dab.io">dab.io</a></h1>
     </header>
 
     <section id="content">
         <%= yield %>
-
-        <section class="row">
-            <section class="twothird centered">
-                <h3>About</h2>
-                <%= render 'partials/about' %>
-            </section>
-        </section>
-
     </section>
 
-    <footer id="primary">© <%= Date.today.year %> Danilo Braband</footer>
+    <section id="about">
+        <h3>About</h2>
+        <%= render 'partials/about' %>
+    </section>
 
-    <script>var _gauges=_gauges||[];(function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","507bc980613f5d27a6000002"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);for(var e,n,a=document.getElementsByClassName("email"),r=0,i=a.length;i>r;r++){if(e=a[r],!e.innerHTML)break;n=e.innerHTML.replace(" . ",".").replace(" [at] ","@"),e.href="mailto:"+n,e.innerHTML=n}})()</script>
+    <%= render 'partials/footer' %>
+    <%= render 'partials/scripts' %>
+
 </body>
 </html>

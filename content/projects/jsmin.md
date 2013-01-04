@@ -5,15 +5,9 @@ created_at: 2012-12-19
 kind: project
 ---
 
-<article class="row">
-<section class="twothird centered">
-
 ### [JSmin][1]
 
 My first [Node.js][2] application. Uses [express][3] as framework and [UglifyJS][4] as javascript compressor. Basically it is just a web-interface for [UglifyJS][4]. You can [find the source on Github][5].
-
-</section>
-</article>
 
   [1]: http://jsmin.de "JSmin"
   [2]: http://nodejs.org "node.js"
