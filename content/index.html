@@ -7,12 +7,10 @@ title: Writings and Projects of Danilo Braband
 <% if projects.length > 0 %>
 
     <h2>Projects</h2>
-    <ul>
+    <dl>
     <% sorted_projects.each do |p| %>
-        <li>
-            <a href="<%= p.path %>" title="<%= p[:description] %>"><%= p[:title] %></a>
-            <p><%= p[:description] %></p>
-        </li>
+        <dt><a href="<%= p.path %>" title="<%= p[:description] %>"><%= p[:title] %></a></dt>
+        <dd><%= p[:description] %></dd>
     <% end %>
-    </ul>
+    </dl>
 <% end %>
