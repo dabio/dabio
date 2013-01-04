@@ -5,16 +5,20 @@
 </head>
 <body>
 
+  <section id="main">
+  
     <header class="primary">
         <h1><a href="/" title="<%= site.config[:title] %>"><%= site.config[:title] %></a></h1>
     </header>
 
     <section id="content">
-<%= yield %>
+      <%= yield %>
     </section>
 
     <%= render 'partials/footer' %>
-    <%= render 'partials/scripts' %>
 
+  </section>
+
+  <%= render 'partials/scripts' %>
 </body>
 </html>

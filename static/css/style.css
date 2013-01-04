@@ -30,13 +30,10 @@ a:hover { text-decoration: underline; }
 
 /* =Layout
 -----------------------------------------------------------------------------*/
-#content,
-#about,
-header.primary,
-footer.primary {
-  width: 540px;
-  padding: 0 20px;
+#main {
   margin: 24px auto;
+  padding: 0 20px;
+  width: 540px;
 }
 
 
