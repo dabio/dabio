@@ -32,6 +32,13 @@ compile '/feeds/*' do
   filter :erb
 end
 
+compile '/404/' do
+  filter :erb
+  filter :redcarpet
+  filter :typogruby
+  layout 'default'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -53,6 +60,10 @@ end
 
 route '/feeds/*' do
   "#{item.identifier[0..-2]}.xml"
+end
+
+route '/404/' do
+  '/404.html'
 end
 
 route '*' do
