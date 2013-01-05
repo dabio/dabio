@@ -1,15 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <%= render 'partials/head' %>
+  <%= render 'partials/head' %>
 </head>
 <body>
 
   <section id="main">
-  
-    <header class="primary">
-        <h1><a href="/" title="<%= site.config[:title] %>"><%= site.config[:title] %></a></h1>
-    </header>
+
+    <%= render 'partials/header' %>
 
     <section id="content">
       <%= yield %>

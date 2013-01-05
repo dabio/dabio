@@ -1,5 +1,6 @@
 title: dab.io
 base_url: http://dab.io
+gauges_site_id: 507bc980613f5d27a6000002
 
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file

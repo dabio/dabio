@@ -5,12 +5,13 @@ title: Writings and Projects of Danilo Braband
 <%= render 'partials/about' %>
 
 <% if projects.length > 0 %>
-
-    <h2>Projects</h2>
-    <dl>
-    <% sorted_projects.each do |p| %>
-        <dt><a href="<%= p.path %>" title="<%= p[:description] %>"><%= p[:title] %></a></dt>
-        <dd><%= p[:description] %></dd>
-    <% end %>
-    </dl>
+    <section class="projects">
+        <h2>Projects</h2>
+        <dl>
+        <% sorted_projects.each do |p| %>
+            <dt><a href="<%= p.path %>" title="<%= p[:description] %>"><%= p[:title] %></a></dt>
+            <dd><%= p[:description] %></dd>
+        <% end %>
+        </dl>
+    </section>
 <% end %>
