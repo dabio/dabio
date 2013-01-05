@@ -36,9 +36,20 @@ a:hover { text-decoration: underline; }
   width: 540px;
 }
 
+#about {
+  margin-top: 3em;
+}
+
+.projects {
+  margin-top: 3em;
+}
+
 
 /* =Header
 -----------------------------------------------------------------------------*/
+header.primary {
+  margin-bottom: 3em;
+}
 header.primary a { color: #222; }
 header.primary a:hover { text-decoration: none; }
 
@@ -48,8 +59,6 @@ header.primary a:hover { text-decoration: none; }
 
 /* =Misc
 -----------------------------------------------------------------------------*/
-dt {
-}
 dd {
   margin-left: 0;
   margin-bottom: 1em;
@@ -58,7 +67,8 @@ dd {
 
 /* =Footer
 -----------------------------------------------------------------------------*/
-footer {
+footer.primary {
   color: #999;
   font-size: .738em;
+  margin-top: 3em;
 }
