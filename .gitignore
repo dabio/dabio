@@ -6,7 +6,6 @@
 bin/
 vendor/
 
-# Nanoc
-tmp/
-output/
+# Jekyll
+_site/
 

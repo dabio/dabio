@@ -1,7 +1,4 @@
 source :rubygems
 
-gem 'nanoc'
-gem 'adsf'
+gem 'jekyll'
 gem 'redcarpet'
-gem 'typogruby'
-gem 'mime-types'

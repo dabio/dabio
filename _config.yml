@@ -1,0 +1,22 @@
+#
+# Standard Jekyll Configuration
+#
+exclude: [CNAME, Gemfile, Gemfile.lock, Makefile, README.md]
+markdown: redcarpet
+permalink: /:title.html
+pygments: true
+rdiscount:
+  extensions: [smart]
+
+#
+# Site Configuration
+#
+url: http://dab.io
+static_url: //dab.io
+title: Writings and Projects of Danilo Braband
+
+#
+# Configuration for Enhancements
+#
+gauges:
+  data-site-id: 507bc980613f5d27a6000002
