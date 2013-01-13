@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://dab.io/feeds/sitemap.xml
