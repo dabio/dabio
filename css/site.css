@@ -10,10 +10,11 @@
 }
 
 .wrap {
-  max-width: 800px;
-  max-width: 40rem;
+  max-width: 760px;
+  max-width: 37rem;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem 3rem;
+  padding: 90px 60px 60px;
+  padding: 4.5rem 3rem 3rem;
 }
 
 /* TYPE */

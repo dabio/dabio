@@ -1,0 +1,17 @@
+---
+layout: page
+title: Danilo Braband - Developer
+---
+{% for project in site.categories.projects %}
+
+  {% if project.project-url %}
+    <h2>
+      <a href="{{ project.project-url }}">{{ project.title }}</a>
+    </h2>
+  {% else %}
+    <h2>{{ project.title }}</h2>
+  {% endif %}
+
+  {{ project.content }}
+
+{% endfor %}
