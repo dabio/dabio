@@ -2,6 +2,11 @@
 layout: page
 title: Danilo Braband - Developer
 ---
+{% for project in site.categories.projects %}
+## {{ project.title }}
+{{ project.content }}
+{% endfor %}
+
 # Lorem Ipsum
 
 ### next headline
