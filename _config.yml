@@ -11,9 +11,8 @@ rdiscount:
 #
 # Site Configuration
 #
-url: http://dab.io
-static_url: //dab.io
-title: Writings and Projects of Danilo Braband
+domain: dab.io
+title: Danilo Braband - Developer
 
 #
 # Configuration for Enhancements

@@ -1,0 +1,21 @@
+---
+layout: nil
+---
+<urlset>
+    <url>
+        <loc>http://{{ site.domain }}/</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    {% for item in site.posts %}
+    <url>
+        <loc>http://{{ site.domain }}{{ item.url }}</loc>
+        <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {% endfor %}
+
+</urlset>
