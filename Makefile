@@ -3,6 +3,9 @@ all: server
 server: clean
 	bundle exec jekyll --pygments --safe --server 9393 --auto
 
+sass:
+	bundle exec sass --style compressed --scss --watch css/site.scss
+
 clean:
 	rm -fr _site/*
 
@@ -19,7 +22,7 @@ install:
 	rbenv rehash
 	bundle install --binstubs --path vendor/gems --without production
 	# Removes jekyll test files
-	rm -r vendor/gems/ruby/1.9.1/gems/jekyll-0.12.0/test/source/*
+	rm -r vendor/gems/ruby/1.9.1/gems/jekyll-*/test/source/*
 
 uninstall:
 	rm -fr Gemfile.lock vendor/ bin/ .bundle/
