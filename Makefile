@@ -1,7 +1,7 @@
 all: server
 
 server: clean
-	bundle exec jekyll --pygments --safe --server 9393 --auto
+	bundle exec jekyll --pygments --safe --server 9393
 
 sass:
 	bundle exec sass --style compressed --scss --watch css/site.scss
