@@ -1,0 +1,22 @@
+#
+# Standard Jekyll Configuration
+#
+auto: true
+exclude: [CNAME, Gemfile, Gemfile.lock, Makefile, README.md, bin, vendor]
+markdown: redcarpet
+permalink: /:categories/:title.html
+pygments: true
+rdiscount:
+  extensions: [smart]
+
+#
+# Site Configuration
+#
+domain: dab.io
+title: Danilo Braband - Developer
+
+#
+# Configuration for Enhancements
+#
+gauges:
+  data-site-id: 507bc980613f5d27a6000002

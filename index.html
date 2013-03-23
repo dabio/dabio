@@ -1,49 +1,17 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset=utf-8>
-<title>Writings and Projects of Danilo Braband</title>
-<meta name="viewport" content="width=580">
-<link rel="alternate" type="application/atom+xml" title="Atom RSS Feed - dab.io" href="/feeds/atom.xml">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic">
-<link rel="stylesheet" href="/css/kube.min.css">
-<link rel="stylesheet" href="/css/style.css">
+---
+layout: page
+title: Danilo Braband - Developer
+---
+{% for project in site.categories.projects %}
 
-</head>
-<body>
+  {% if project.project-url %}
+    <h2>
+      <a href="{{ project.project-url }}">{{ project.title }}</a>
+    </h2>
+  {% else %}
+    <h2>{{ project.title }}</h2>
+  {% endif %}
 
-  <section id="main">
+  {{ project.content }}
 
-    <header class="primary">
-    <h1><a href="/" title="Home page">dab.io</a></h1>
-</header>
-
-
-    <section id="content">
-      <p>These are the writings and projects of Danilo Braband. You can contact me at <a class="email">dbraband [at] gmail . com</a>.</p>
-
-
-
-    <section class="projects">
-        <h2>Projects</h2>
-        <dl>
-        
-            <dt><a href="/projects/berlinracingteam.html" title="Berlin based cycling team.">Berlin Racing&nbsp;Team</a></dt>
-            <dd>Berlin based cycling&nbsp;team.</dd>
-        
-            <dt><a href="/projects/jsmin.html" title="A javascript minimizer.">JSmin</a></dt>
-            <dd>A javascript&nbsp;minimizer.</dd>
-        
-        </dl>
-    </section>
-
-    </section>
-
-    <footer class="primary">© 2013 Danilo Braband · All Right Reserved.</footer>
-
-  </section>
-
-  <script>var _gauges=_gauges||[];(function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","507bc980613f5d27a6000002"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);for(var e,n,a=document.getElementsByClassName("email"),r=0,i=a.length;i>r;r++){if(e=a[r],!e.innerHTML)break;n=e.innerHTML.replace(" . ",".").replace(" [at] ","@"),e.href="mailto:"+n,e.innerHTML=n};/iPhone/i.test(navigator.userAgent)&&!pageYOffset&&!location.hash&&setTimeout(function(){window.scrollTo(0,1)},100)})()</script>
-
-</body>
-</html>
+{% endfor %}
