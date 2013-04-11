@@ -2,6 +2,15 @@
 layout: page
 title: Danilo Braband - Developer
 ---
+
+{% for w in site.categories.writings %}
+
+  <h2><a href="{{ w.url }}">{{ w.title }}</a></h2>
+
+  {{ w.content }}
+
+{% endfor %}
+
 {% for project in site.categories.projects %}
 
   {% if project.project-url %}
