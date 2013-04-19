@@ -11,16 +11,26 @@ title: Danilo Braband - Developer
 
 {% endfor %}
 
-{% for project in site.categories.projects %}
+{% if site.categories.talks %}
+  <h2>Talks</h2>
+  <dl class=talks>
+  {% for talk in site.categories.talks %}
+    <dt><a href="{{ talk.url }}">{{ talk.title }}</a></dt>
+  {% endfor %}
+  </ul>
+{% endif %}
 
-  {% if project.project-url %}
-    <h2>
-      <a href="{{ project.project-url }}">{{ project.title }}</a>
-    </h2>
-  {% else %}
-    <h2>{{ project.title }}</h2>
-  {% endif %}
 
-  {{ project.content }}
-
-{% endfor %}
+{% if site.categories.projects %}
+  <h2>Projects</h2>
+  <dl class=projects>
+  {% for project in site.categories.projects %}
+    {% if project.project-url %}
+      <dt><a href="{{ project.project-url }}">{{ project.title }}</a></dt>
+    {% else %}
+      <dt>{{ project.title }}</dt>
+    {% endif %}
+    <dd>{{ project.content }}</dd>
+  {% endfor %}
+  </dl>
+{% endif %}
