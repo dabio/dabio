@@ -30,7 +30,7 @@ end
 desc "Deploy to github"
 task :deploy do
   `git push origin gh-pages`
-  `curl www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fdab.io%2Ffeeds%2Fsitemap.    xml`
+  `curl www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fdab.io%2Ffeeds%2Fsitemap.xml`
 end
 
 ###############
