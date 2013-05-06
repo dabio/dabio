@@ -1,10 +1,10 @@
 #
 # Standard Jekyll Configuration
 #
-auto: true
 exclude: [CNAME, Gemfile, Gemfile.lock, Rakefile, README.md, site.scss, bin, vendor]
 markdown: redcarpet
 permalink: /:categories/:title.html
+port: 9393
 pygments: true
 rdiscount:
   extensions: [smart]

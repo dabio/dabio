@@ -9,7 +9,7 @@ desc "Watch the site and regenerate when it changes"
 task :watch => [:clean] do
   puts "Starting to watch source with Jekyll and Compass."
   pids = [
-    spawn('bundle exec jekyll --pygments --safe --server 9393'),
+    spawn('bundle exec jekyll serve --watch'),
     spawn('bundle exec sass --style compressed --scss --watch _assets:css')
   ]
 
