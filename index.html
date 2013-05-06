@@ -25,11 +25,7 @@ title: Danilo Braband - Developer
   <h2>Projects</h2>
   <dl class=projects>
   {% for project in site.categories.projects %}
-    {% if project.project-url %}
-      <dt><a href="{{ project.project-url }}">{{ project.title }}</a></dt>
-    {% else %}
-      <dt>{{ project.title }}</dt>
-    {% endif %}
+    <dt><a href="{{ project.url }}">{{ project.title }}</a></dt>
     <dd>{{ project.content }}</dd>
   {% endfor %}
   </dl>
