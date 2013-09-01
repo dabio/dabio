@@ -45,7 +45,7 @@ end
 desc 'Installs all dependencies for running locally'
 task :install do
   `bundle install --binstubs --path vendor/gems --without production`
-  rm_rf ['vendor/gems/ruby/1.9.1/gems/jekyll-*/test/source/']
+  `rm -rf vendor/gems/ruby/*/gems/jekyll-*/test/source`
 end
 
 desc 'Uninstalls all rubygems and temp files'
