@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  {% include head.html %}
+  <meta charset=utf-8>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <link rel=stylesheet href="/css/site.css">
 </head>
-<body{% if page.body-class %} class="{{ page.body-class }}" {% endif %}>
+
+<body>
+
+  <header>
+    <h1><a href="/">Danilo Braband</a></h1>
+  </header>
+
   {{ content }}
 
   {% include footer.html %}
   {% include scripts.html %}
 </body>  
+
 </html>

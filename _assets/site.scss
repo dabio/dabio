@@ -1,26 +1,15 @@
 @import "_reset";
 @import "_fonts";
-
-$header-color: #222;
-$text-color: #333;
-$background-color: #fff;
-$selection-color: #fff;
-$selection-background-color: #07b;
-$a-color: #07b;
-$a-hover-color: #8cc1e0;
-$header-a-color: $header-color;
-$header-a-hover-color: $header-color;
-
-$footer-color: #999;
+@import "_grid";
+@import "_variables";
 
 ::selection {
-  background-color: $selection-background-color;
-  color: $selection-color;
+  background-color: $bg-color-selection;
+  color: $color-selection;
 }
 
 html {
-  background-color: $background-color;
-  font-size: 62.5%;
+  background-color: $bg-color-html;
   min-height: 100%
 }
 
@@ -29,13 +18,9 @@ body {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  line-height:2.6rem;
-  font-family: Merriweather, serif;
-  color: $text-color;
-  padding: 5.2rem 0 0 0
-}
-body.post {
-  padding-top: 7.8rem;
+  line-height: 1.5rem;
+  font-family: $font-family-body;
+  color: $color-body;
 }
 body:before, body:after {
   content:" ";
@@ -44,77 +29,28 @@ body:before, body:after {
 body:after {
   clear:both
 }
-@media screen and (max-width: 480px) {
-  body {
-    padding:5.2rem 1.618em 0 1.618em
-  }
-}
 
 h1,
 h2,
-h3 {
-  color: $header-color;
-  font-family: Lato, sans-serif;
-  font-weight: 700;
-}
-h1 {
-  font-size: 5.4rem;
-  font-weight: 900;
-  line-height: 7.8rem;
-  margin: 0 0 5.2rem;
-  baseline-shift: 10px;
-}
-h2 {
-  font-size:3.6rem;
-  line-height:5.2rem;
-  margin:5.2rem 0 2.6rem 0;
-}
-
-p {
-  font-size: 1.6rem;
-  margin:0 0 2.6rem 0;
-  /*text-align: justify;*/
+h3,
+h4,
+h5,
+h6 {
+  color: $color-header;
 }
 
 a {
   display: inline-block;
-  color: $a-color;
+  color: $color-a;
   text-decoration: none;
   -webkit-transition:color .1s linear
 }
 a:hover {
-  color: $a-hover-color;
+  color: $color-a-hover;
 }
 
-h1 a,
-h2 a,
-h3 a {
-  color: $header-a-color;
-  text-decoration: none;
-}
-h1 a:hover,
-h2 a:hover,
-h3 a:hover {
-  color: $header-a-hover-color;
-}
-
-dt {
-  font-family: Lato, sans-serif;
-  font-weight: bold;
-  font-size: 1.9rem;
-  margin-bottom: 1.3rem;
-
-  a {
-    color: $header-a-color;
-  }
-  a:hover {
-    color: $header-a-hover-color;
-  }
-}
-
-footer.site-footer {
-  color: $footer-color;
-  font-family: Lato, sans-serif;
-  font-size: 1.2rem;
-  margin: 5.2rem 0;
+body > header {
+  border-bottom: 1px solid #eee;
+  padding: 1.5em 0;
+  margin-bottom: 3em;
 }
