@@ -1,41 +1,36 @@
-###############
-# Development #
-###############
-
 desc "Same as rake watch"
 task :default => :watch
 
-desc "Watch the site and regenerate when it changes"
+desc "Load a local server and watch for any changes"
 task :watch => [:clean] do
-  puts "Starting to watch source with Jekyll and Compass."
+
+  annotate "Starting server and watching for changes."
+
   pids = [
-    spawn('bundle exec jekyll serve --watch'),
+    spawn('bundle exec jekyll serve --drafts --watch'),
     spawn('bundle exec sass --style compressed --scss --watch _assets:css')
   ]
 
   trap 'INT' do
-    Process.kill 'INT', *pids
+    Process.kill('INT', *pids) rescue Errno::ESRCH
     exit 1
   end
 
   loop do
     sleep 1
   end
-end
 
-##############
-# Deployment #
-##############
+end
 
 desc "Deploy to github"
 task :deploy do
+
+  annotate "Updating live"
+
   `git push origin gh-pages`
   `curl www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fdab.io%2Ffeeds%2Fsitemap.xml`
-end
 
-###############
-# Un-/Install #
-###############
+end
 
 desc 'Clean out caches: .sass-cache and _site'
 task :clean do
@@ -87,11 +82,13 @@ task :new_post, :title do |t, args|
   end
 end
 
-###########
-# Helpers #
-###########
+private
 
-def get_stdin(message)
-  print message
-  STDIN.gets.chomp
-end
+  def annotate(text)
+    puts "\n### #{text} ###\n\n"
+  end
+
+  def get_stdin(message)
+    print message
+    STDIN.gets.chomp
+  end
