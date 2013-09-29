@@ -39,6 +39,12 @@ h5,
 h6 {
   color: $color-header;
   font-weight: 700;
+  margin: .67em 0;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-top: 1.5em;
 }
 
 a {
@@ -54,6 +60,15 @@ p {
   margin-bottom: 1.5em;
 }
 
+time {
+    color: $color-time-talks;
+    margin-left: 1em;
+}
+/*
+body p:first-child {
+  font-size: 1.25em;
+}
+*/
 body > header {
   border-bottom: 1px solid #eee;
   padding: 1.5em 0;
@@ -62,7 +77,9 @@ body > header {
 
   h1 {
     font-weight: 400;
+    font-size: 1em;
     float: left;
+    margin: 0;
   }
 
   nav {

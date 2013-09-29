@@ -2,11 +2,12 @@
 layout: page
 ---
 
-<p>Hi, I'm Danilo Braband.</p>
+Hi, I'm Danilo Braband. I'm a developer at [parku](http://parku.ch).
 
-<p>I generally work with Go, Ruby, Objective-C, Git and Mac.</p>
+I spend the past two years working with an ecommerce agency to improve their online
+shops. Outside my day job I've explored and learned a few programming languages and continue to practice those. I generally work with Go, Ruby, Objective-C, Git and Mac.
 
-<p>On a more personal note, I love cycling (I usually ride with the Berlin Racing Team), and swimming. If you'd like to discuss something or need ay advice, please shoot me an email. I'm pretty friendly.</p>
+On a more personal note, I love cycling (I usually ride with the [Berlin Racing Team](http://www.berlinracingteam.de), and swimming. If you'd like to discuss something or need any advice, please shoot me an email. I'm pretty friendly.
 
 {% comment %}
 
