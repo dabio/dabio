@@ -39,7 +39,7 @@ phpize
 ./configure
 make
 sudo make install
-echo "echo 'extension=\"mcrypt\"' >> /etc/php.ini" | sudo bash
+echo "echo 'extension=\"mcrypt.so\"' >> /etc/php.ini" | sudo bash
 ```
 
 Restart Apache `sudo apachectl restart` and the mcrypt extension should be installed as expected.
