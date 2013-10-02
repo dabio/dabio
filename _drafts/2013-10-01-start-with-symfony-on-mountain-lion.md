@@ -63,8 +63,8 @@ Now open the file `/private/etc/apache2/extra/httpd-vhosts.conf` and remove all 
 
 ```apache
 <Directory "/Users/[username]/symfony">
-    Options Indexes MultiViews
-    AllowOverride None
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
     Order allow,deny
     Allow from all
 </Directory>
@@ -89,12 +89,11 @@ We do not start Apache yet.
 
 ## PHP
 
-You need to copy the default `php.ini` file to the correct place and add `detect_unicode = Off` to the end of the file. While we are at it, we also add the xdebug extension.
+You need to copy the default `php.ini` file to the correct place and add `detect_unicode = Off` to the end of the file.
 
 ```bash
 $ sudo cp /etc/php.ini.default /etc/php.ini
 $ echo "echo 'detect_unicode = Off' >> /etc/php.ini" | sudo bash
-$ echo "echo 'extension=\"xdebug.so\"' >> /etc/php.ini" | sudo bash
 ```
 
 Open the file `/etc/php.ini`, search for `date.timezone` and set your timezone accordingly.
