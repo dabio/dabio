@@ -69,12 +69,12 @@ Now open the file `/private/etc/apache2/extra/httpd-vhosts.conf` and remove all 
     Allow from all
 </Directory>
 
-<VirtualHost *:80>¬
+<VirtualHost *:80>
     DocumentRoot "/Users/[username]/symfony/web"
     ServerName dev.symfony
     ErrorLog "/Users/[username]/symfony/app/logs/apache_error.log"
     CustomLog "/Users/[username]/symfony/app/logs/apache_access.log" common
-</VirtualHost>¬
+</VirtualHost>
 ```
 
 Replace `[username]` with your actual username. If you don't know it, start a new terminal and type `whoami`, which outputs your username.
