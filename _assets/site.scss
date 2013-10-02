@@ -105,3 +105,17 @@ body > footer {
     float: left;
   }
 }
+
+footer {
+  overflow: auto;
+
+  .contact {
+    float: left;
+    width: 50%;
+  }
+
+  .recent-posts {
+    float: right;
+    width: 50%;
+  }
+}

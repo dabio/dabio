@@ -23,11 +23,20 @@
   {{ content }}
 
   <footer>
-    <nav>
+    <nav class="contact">
       <h2>Contact</h2>
       <a href="https://github.com/dabio">GitHub</a>
       <a class="email">dbraband [at] gmail . com</a>
     </nav>
+
+    {% if site.categories.posts %}
+    <nav class="recent-posts">
+      <h2>Recent Blog Posts</h2>
+      {% for post in site.categories.posts %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
   </footer>
 
   <script>var _gauges=_gauges||[];(function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","{{ site.gauges.data-site-id }}"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);for(var e,n,a=document.getElementsByClassName("email"),r=0,i=a.length;i>r;r++){if(e=a[r],!e.innerHTML)break;n=e.innerHTML.replace(" . ",".").replace(" [at] ","@"),e.href="mailto:"+n,e.innerHTML=n};/iPhone/i.test(navigator.userAgent)&&!pageYOffset&&!location.hash&&setTimeout(function(){window.scrollTo(0,1)},100)})()</script>
