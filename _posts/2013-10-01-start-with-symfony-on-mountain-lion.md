@@ -103,7 +103,7 @@ Open the file `/etc/php.ini`, search for `date.timezone` and set your timezone a
 date.timezone = Europe/Berlin
 ```
 
-Don't forget to remove the `;` at the beginning of the file. Save the file.
+Don't forget to remove the `;` at the beginning of the line. Save the file.
 
 ## Symfony
 
@@ -115,15 +115,17 @@ $ curl -sS https://getcomposer.org/installer | php
 $ mv composer.phar /usr/local/bin/composer
 ```
 
-Now you can run get the current Symfony version with the command:
+Now you can get the current Symfony version with the command:
 
 ```bash
-$ composer create-project symfony/framework-standard-edition symfony/ 2.3.5
+$ composer create-project symfony/framework-standard-edition symfony/ 2.3.6
 $ cd symfony
 $ chmod 0777 app/{logs,cache}
+$ sudo chmod +a "_www allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
+$ sudo chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
 ```
 
-Answer the questions you get asked accordingly to your configuration. You also might need to replace `2.3.5` with the current version of symfony.
+Answer the questions you get asked accordingly to your configuration. You also might need to replace `2.3.6` with the current version of symfony.
 
 You now have a fresh installation of your Symfony in your home directory.
 
