@@ -148,7 +148,7 @@ $ sudo pear channel-update pear.php.net
 $ sudo pecl channel-update pecl.php.net
 ```
 
-Install the open recommendation `intl` and the PHP accelerator `apc`:
+Install the open recommendations `intl` and the PHP accelerator `apc`:
 
 ```bash
 $ brew install icu4c
