@@ -62,16 +62,17 @@ Open the file `/private/etc/apache2/httpd.conf` in your favorite editor and remo
 Now open the file `/private/etc/apache2/extra/httpd-vhosts.conf` and remove all `<VirtualHost>` instances and add the following:
 
 ```apache
-<Directory "/Users/[username]/symfony">
-    Options Indexes FollowSymLinks MultiViews
-    AllowOverride All
-    Order allow,deny
-    Allow from all
-</Directory>
-
 <VirtualHost *:80>
     DocumentRoot "/Users/[username]/symfony/web"
     ServerName dev.symfony
+
+    <Directory "/Users/[username]/symfony">
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+
     ErrorLog "/Users/[username]/symfony/app/logs/apache_error.log"
     CustomLog "/Users/[username]/symfony/app/logs/apache_access.log" common
 </VirtualHost>
@@ -163,3 +164,9 @@ $ sudo pecl install apc
 Restart Apache `sudo apachectl restart`.
 
 Reload your browser [http://dev.sympfony/config.php](http://dev.symfony/config.php) and watch for open recommendations.
+
+## Add this
+
+```
+include_path = ".:/usr/lib/php/pear"¬
+```
