@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: post
 title: "Start with Symfony on Mountain Lion"
 date: 2013-10-01 22:43
-category: blog
+category: posts
 ---
 
 Start developing [Symfony](http://symfony.com/) on a Mac is quite easy. Mountain Lion ships with some of the required libraries, but a few are hidden in the depth of the system.
@@ -39,7 +39,7 @@ If you prefer running MySQL I'd like to refer to [MariaDB](https://mariadb.org) 
 $ brew install mariadb
 ```
 
-If you get errors that no compilers are available install the `apple-gcc42`compiler and re-run `brew install mariadb`.
+If you get errors that no compilers are available install the `apple-gcc42` compiler and re-run `brew install mariadb`.
 
 ```bash
 $ brew install apple-gcc42
@@ -119,13 +119,18 @@ Now you can get the current Symfony version with the command:
 
 ```bash
 $ composer create-project symfony/framework-standard-edition symfony/ 2.3.6
+```
+
+Answer the questions you get asked accordingly to your configuration. You also might need to replace `2.3.6` with the current version of symfony.
+
+Now set the writing permissions for apache and the current user to the log and cache directory.
+
+```bash
 $ cd symfony
 $ chmod 0777 app/{logs,cache}
 $ sudo chmod +a "_www allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
 $ sudo chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
 ```
-
-Answer the questions you get asked accordingly to your configuration. You also might need to replace `2.3.6` with the current version of symfony.
 
 You now have a fresh installation of your Symfony in your home directory.
 
@@ -167,8 +172,10 @@ Restart Apache `sudo apachectl restart`.
 
 Reload your browser [http://dev.sympfony/config.php](http://dev.symfony/config.php) and watch for open recommendations.
 
+<!--
 ## Add this
 
 ```
-include_path = ".:/usr/lib/php/pear"¬
+include_path = ".:/usr/lib/php/pear"
 ```
+-->

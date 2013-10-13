@@ -61,9 +61,23 @@ p {
 }
 
 time {
-    color: $color-time-talks;
-    margin-left: 1em;
+  color: $color-time-talks;
+  margin-left: 1em;
 }
+
+code,
+pre {
+  background-color: #eee;
+}
+code {
+  font-size: 0.85em;
+  font-family: "PT Mono", monospace;
+}
+pre {
+  margin-bottom: 1.5em;
+  padding: .75em .5em;
+}
+
 /*
 body p:first-child {
   font-size: 1.25em;
