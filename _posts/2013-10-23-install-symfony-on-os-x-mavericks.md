@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Install Symfony on OSX Mavericks"
+title: "Install Symfony on OS X Mavericks"
 date: 2013-10-23 17:59:56
 category: posts
 ---
@@ -9,7 +9,7 @@ category: posts
 
 ![Fresh installed Mavericks](/images/blog/mavericks-start.jpg)
 
-Apples newest version of OSX ships with a newer, but still not the latest stable version of [PHP][php]:
+Apples newest version of OS X ships with a newer, but still not the latest stable version of [PHP][php]:
 
 ```bash
 $ php -v
