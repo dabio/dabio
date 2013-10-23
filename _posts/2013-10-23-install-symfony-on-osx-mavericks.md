@@ -135,6 +135,14 @@ Start the server again `php app/console server:run` and head over to [localhost:
 
 None? Well, we are done. You can start configuring and developing your application.
 
+## Xdebug
+
+If you like to add [Xdebug support][xdebug], just add the following lines to your `/etc/php.ini` and restart your development server.
+
+```ini
+zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20100525/xdebug.so
+xdebug.remote_enable=On
+```
 
   [apache]: http://httpd.apache.org
   [php]: http://php.net
@@ -145,5 +153,5 @@ None? Well, we are done. You can start configuring and developing your applicati
   [mariadb]: https://mariadb.org
   [composer]: http://getcomposer.org
   [symfony]: http://symfony.com
-
+  [xdebug]: http://xdebug.org
 
