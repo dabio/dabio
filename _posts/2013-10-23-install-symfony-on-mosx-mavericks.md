@@ -9,7 +9,7 @@ category: posts
 
 ![Fresh installed Mavericks](/images/blog/mavericks-start.jpg)
 
-Apples newest version of OSX ships with newer, but still not the latest stable version of [PHP][php]:
+Apples newest version of OSX ships with a newer, but still not the latest stable version of [PHP][php]:
 
 ```bash
 $ php -v
