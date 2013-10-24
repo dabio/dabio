@@ -23,7 +23,7 @@ After downloading and installation, start Xcode and go to downloads area in the 
 
 Paste the following command into the terminal to install [Homebrew](http://brew.sh):
 
-```bash
+```sh
 $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
@@ -35,13 +35,13 @@ You can decide which database you would like to use. Running [PostgreSQL](http:/
 
 If you prefer running MySQL I'd like to refer to [MariaDB](https://mariadb.org) an enhanced, drop-in replacement for MySQL. You can install it with [Homebrew](http://brew.sh):
 
-```bash
+```sh
 $ brew install mariadb
 ```
 
 If you get errors that no compilers are available install the `apple-gcc42` compiler and re-run `brew install mariadb`.
 
-```bash
+```sh
 $ brew install apple-gcc42
 ```
 
@@ -92,14 +92,14 @@ We do not start Apache yet.
 
 You need to copy the default `php.ini` file to the correct place and add `detect_unicode = Off` to the end of the file.
 
-```bash
+```sh
 $ sudo cp /etc/php.ini.default /etc/php.ini
 $ echo "echo 'detect_unicode = Off' >> /etc/php.ini" | sudo bash
 ```
 
 Open the file `/etc/php.ini`, search for `date.timezone` and set your timezone accordingly.
 
-```
+```ini
 date.timezone = Europe/Berlin
 ```
 
@@ -109,7 +109,7 @@ Don't forget to remove the `;` at the beginning of the line. Save the file.
 
 We use [Composer](http://getcomposer.org) to install [Symfony](http://symfony.com/). Start the install process:
 
-```bash
+```sh
 $ cd
 $ curl -sS https://getcomposer.org/installer | php
 $ mv composer.phar /usr/local/bin/composer
@@ -117,7 +117,7 @@ $ mv composer.phar /usr/local/bin/composer
 
 Now you can get the current Symfony version with the command:
 
-```bash
+```sh
 $ composer create-project symfony/framework-standard-edition symfony/ 2.3.6
 ```
 
@@ -125,7 +125,7 @@ Answer the questions you get asked accordingly to your configuration. You also m
 
 Now set the writing permissions for apache and the current user to the log and cache directory.
 
-```bash
+```sh
 $ cd symfony
 $ chmod 0777 app/{logs,cache}
 $ sudo chmod +a "_www allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
@@ -144,7 +144,7 @@ Correct all open major problems if there are some left.
 
 Install PECL and PEAR:
 
-```bash
+```sh
 $ sudo php /usr/lib/php/install-pear-nozlib.phar
 $ pear config-set php_ini /private/etc/php.ini
 $ pecl config-set php_ini /private/etc/php.ini
@@ -155,14 +155,14 @@ $ sudo pecl channel-update pecl.php.net
 
 Install the open recommendations `intl` and the PHP accelerator `apc`:
 
-```bash
+```sh
 $ brew install icu4c
 $ sudo pecl install intl
 ```
 
 Answer with the path `/usr/local/opt/icu4c` when asked for the ICU libraries and headers.
 
-```bash
+```sh
 $ brew install pcre
 $ sudo ln -s /usr/local/include/pcre.h /usr/include/
 $ sudo pecl install apc

@@ -11,29 +11,28 @@ I presume you have [Homebrew](http://brew.sh) installed. If not, head over to my
 
 Install mcrypt as follows:
 
-```bash
+```sh
 $ brew install mcrypt
 ```
 
 Get your [PHP](http://php.net) version with `php -v`:
 
-```bash
+```sh
 $ php -v
 PHP 5.3.26 (cli) (built: Jul  7 2013 19:05:08)
 Copyright (c) 1997-2013 The PHP Group
 Zend Engine v2.3.0, Copyright (c) 1998-2013 Zend Technologies
-$
 ```
 
 I have PHP 5.3.26 installed. Now download your PHP here [php.net/get/php-5.3.26.tar.gz/from/a/mirror](http://www.php.net/get/php-5.3.26.tar.gz/from/a/mirror) (replace with your version) and extract it:
 
-```bash
+```sh
 cd ~/Downloads && tar xfz php-5.3.26.tar.gz
 ```
 
 Now compile the mcrypt PHP-extension.
 
-```bash
+```sh
 cd php-5.3.26/ext/mcrypt/
 phpize
 ./configure

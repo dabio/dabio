@@ -11,7 +11,7 @@ category: posts
 
 Apples newest version of OS X ships with a newer, but still not the latest stable version of [PHP][php]:
 
-```bash
+```sh
 $ php -v
 PHP 5.4.17 (cli) (built: Aug 25 2013 02:03:38) 
 Copyright (c) 1997-2013 The PHP Group
@@ -22,7 +22,7 @@ We start again with [downloading the latest version of Xcode][xcode-appstore] fr
 
 After installing, get the Command Line Developer Tools through the following command and follow the on-screen instructions.
 
-```bash
+```sh
 $ xcode-select --install
 ```
 
@@ -30,7 +30,7 @@ $ xcode-select --install
 
 We need to get [Homebrew][homebrew]. Paste that at your terminal prompt.
 
-```bash
+```sh
 $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
@@ -42,7 +42,7 @@ Which database you want to use is up to you. Sadly PHP on Mavericks does not shi
 
 I will use [MariaDB][mariadb], which is an enhanced, drop-in replacement for MySQL. The installation with [Homebrew][homebrew] is quite easy:
 
-```bash
+```sh
 $ brew install apple-gcc42
 $ brew install mariadb
 ```
@@ -53,11 +53,25 @@ Start your fresh MariaDB with `mysql.server start` and test your connection with
 
 ## PHP
 
+To use `php.ini` we need to activate it through copying it to `/etc/php.ini`.
+
+```sh
+$ sudo cp /etc/php.ini.default /etc/php.ini
+```
+
+Now open the file in your favorite editor and add your timezone.
+
+```ini
+date.timezone = Europe/Berlin
+```
+
+Choose your timezone accordingly and do not forget to remove the `;` in front of the line.
+
 ## Symfony
 
 We are using [Composer][composer] to install [Symfony][symfony]:
 
-```bash
+```sh
 $ cd
 $ curl -sS https://getcomposer.org/installer | php
 $ mv composer.phar /usr/local/bin/composer
@@ -65,7 +79,7 @@ $ mv composer.phar /usr/local/bin/composer
 
 Now get the latest Symfony version with:
 
-```bash
+```sh
 $ composer create-project symfony/framework-standard-edition symfony/ 2.3.6
 ```
 
@@ -73,7 +87,7 @@ Answer the questions you get asked accordingly to your configuration (I just pre
 
 Don't forget to set the writing permissions to the cache and log directories.
 
-```bash
+```sh
 $ cd symfony
 $ chmod 0777 app/{cache,logs}
 $ chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" app/{cache,logs}
@@ -81,7 +95,7 @@ $ chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" a
 
 Start the built-in web server.
 
-```bash
+```sh
 $ php app/console server:run
 ```
 
@@ -101,7 +115,7 @@ Stop the built-in server with `ctrl-c`.
 
 Mavericks ships with `PECL` and `PEAR`, but we need to activate both:
 
-```bash
+```sh
 $ sudo php /usr/lib/php/install-pear-nozlib.phar
 $ pear config-set php_ini /private/etc/php.ini
 $ pecl config-set php_ini /private/etc/php.ini
@@ -112,7 +126,7 @@ $ sudo pecl channel-update pecl.php.net
 
 Start installing `intl`:
 
-```bash
+```sh
 $ brew install autoconf icu4c
 $ sudo pecl install intl
 ```
@@ -121,7 +135,7 @@ When asked for the path to the ICO libraries and headers, answer with `/usr/loca
 
 And now `APC`:
 
-```bash
+```sh
 $ brew install pcre
 $ sudo ln -s /usr/local/include/pcre.h /usr/include/
 $ sudo pecl install apc

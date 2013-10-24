@@ -1,6 +1,7 @@
 @import "_reset";
 @import "_fonts";
-@import "_grid";
+// @import "_grid";
+@import "_highlight";
 @import "_variables";
 
 ::selection {
@@ -67,7 +68,7 @@ time {
 
 code,
 pre {
-  background-color: #eee;
+  background-color: #fafafa;
 }
 code {
   font-size: 0.85em;
