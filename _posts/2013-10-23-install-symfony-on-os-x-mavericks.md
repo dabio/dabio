@@ -5,7 +5,7 @@ date: 2013-10-23 17:59:56
 category: posts
 ---
 
-[Mavericks](http://www.apple.com/osx/) is out and my manual for [getting Symfony to run on Mountain Lion](/posts/start-with-symfony-on-mountain-lion.html) is already outdated. This guide is an update to the old manual.
+[Mavericks][mavericks] is out and my manual for [getting Symfony to run on Mountain Lion][symfony-lion] is already outdated. This guide is an update to the old manual.
 
 ![Fresh installed Mavericks](/images/blog/mavericks-start.jpg)
 
@@ -13,7 +13,7 @@ Apples newest version of OS X ships with a newer, but still not the latest stabl
 
 ```sh
 $ php -v
-PHP 5.4.17 (cli) (built: Aug 25 2013 02:03:38) 
+PHP 5.4.17 (cli) (built: Aug 25 2013 02:03:38)
 Copyright (c) 1997-2013 The PHP Group
 Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies
 ```
@@ -99,7 +99,7 @@ Start the built-in web server.
 $ php app/console server:run
 ```
 
-The URL for your application will be [localhost:8000/app_dev.php](http://localhost:8000/app_dev.php). 
+The URL for your application will be [localhost:8000/app_dev.php](http://localhost:8000/app_dev.php).
 
 ![Start site of a newly installed symfony](/images/blog/symfony-start.png)
 
@@ -158,6 +158,8 @@ zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20100525/xdebug.so
 xdebug.remote_enable=On
 ```
 
+  [symfony-lion]: /posts/start-with-symfony-on-mountain-lion.html
+  [mavericks]: http://www.apple.com/osx/
   [apache]: http://httpd.apache.org
   [php]: http://php.net
   [xcode-appstore]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12
