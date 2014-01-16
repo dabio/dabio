@@ -32,6 +32,11 @@ task :deploy do
 
 end
 
+desc 'checks all links on web site'
+task :linklint do
+  `linklint -http -host localhost:9393 -limit 1000 /@`
+end
+
 desc 'Clean out caches: .sass-cache and _site'
 task :clean do
   rm_rf ['.sass-cache/', '_site/']
@@ -39,7 +44,7 @@ end
 
 desc 'Installs all dependencies for running locally'
 task :install do
-  `bundle install --binstubs --path vendor/gems --without production`
+  `bundle install --binstubs vendor/bundle/bin --path vendor/bundle -j4 --without production`
   `rm -rf vendor/gems/ruby/*/gems/jekyll-*/test/source`
 end
 
