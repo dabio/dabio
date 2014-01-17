@@ -5,7 +5,7 @@ date: 2013-10-23 17:59:56
 category: posts
 ---
 
-[Mavericks][mavericks] is out and my manual for [getting Symfony to run on Mountain Lion][symfony-lion] is already outdated. This guide is an update to the old manual.
+[Mavericks](http://www.apple.com/osx/) is out and my manual for [getting Symfony to run on Mountain Lion](/posts/start-with-symfony-on-mountain-lion.html) is already outdated. This guide is an update to the old manual.
 
 ![Fresh installed Mavericks](/images/blog/mavericks-start.jpg)
 
@@ -158,8 +158,6 @@ zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20100525/xdebug.so
 xdebug.remote_enable=On
 ```
 
-  [symfony-lion]: /posts/start-with-symfony-on-mountain-lion.html
-  [mavericks]: http://www.apple.com/osx/
   [apache]: http://httpd.apache.org
   [php]: http://php.net
   [xcode-appstore]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12

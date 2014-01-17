@@ -5,9 +5,9 @@ date: 2013-10-02 14:16
 category: posts
 ---
 
-After following my last tutorial about [starting with Symfony on a new Mac][symfony-lion], you might struggle with an extension, a few bundles need: [mcrypt][mcrypt].
+After following my last tutorial about [starting with Symfony on a new Mac](/posts/start-with-symfony-on-mountain-lion.html), you might struggle with an extension, a few bundles need: [mcrypt](http://mcrypt.sourceforge.net).
 
-I presume you have [Homebrew][homebrew] installed. If not, head over to my [tutorial][symfony-lion] and work your way through the process.
+I presume you have [Homebrew][homebrew] installed. If not, head over to my [tutorial](/posts/start-with-symfony-on-mountain-lion.html) and work your way through the process.
 
 Install mcrypt as follows:
 
@@ -43,8 +43,6 @@ echo "echo 'extension=\"mcrypt.so\"' >> /etc/php.ini" | sudo bash
 
 Restart Apache `sudo apachectl restart` and the mcrypt extension should be installed as expected.
 
-  [symfony-lion]: /posts/start-with-symfony-on-mountain-lion.html
   [php]: http://php.net
   [php-download-link]: http://www.php.net/get/php-5.3.26.tar.gz/from/a/mirror
   [homebrew]: http://brew.sh
-  [mcrypt]: http://mcrypt.sourceforge.net
