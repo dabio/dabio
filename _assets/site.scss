@@ -79,12 +79,13 @@ pre {
   padding: .75em .5em;
 }
 
-/*
-body p:first-child {
+.homepage p:first-of-type {
   font-size: 1.25em;
+  margin-top: 2.5em;
+  float:right;
 }
-*/
-body > header {
+
+header {
   border-bottom: 1px solid #eee;
   padding: 1.5em 0;
   margin-bottom: 3em;
@@ -106,7 +107,7 @@ body > header {
   }
 }
 
-body > footer {
+footer {
   border-top: 1px solid #eee;
   margin: 3em 0;
   padding: 1.5em 0;
