@@ -13,7 +13,7 @@ Apples newest version of OS X ships with a newer, but still not the latest stabl
 
 ```sh
 $ php -v
-PHP 5.4.17 (cli) (built: Aug 25 2013 02:03:38)
+PHP 5.4.24 (cli) (built: Jan 19 2014 21:32:15)
 Copyright (c) 1997-2013 The PHP Group
 Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies
 ```
