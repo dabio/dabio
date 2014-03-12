@@ -31,7 +31,7 @@ $ xcode-select --install
 We need to get [Homebrew][homebrew]. Paste that at your terminal prompt.
 
 ```sh
-$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
 Run `brew doctor` to finish the installation of homebrew.
@@ -80,10 +80,10 @@ $ mv composer.phar /usr/local/bin/composer
 Now get the latest Symfony version with:
 
 ```sh
-$ composer create-project symfony/framework-standard-edition symfony/ 2.3.6
+$ composer create-project symfony/framework-standard-edition symfony/ 2.4.2
 ```
 
-Answer the questions you get asked accordingly to your configuration (I just press enter as the prefilled settings are fine for my configuration). You also might need to replace `2.3.6` with the current version of symfony.
+Answer the questions you get asked accordingly to your configuration (I just press enter as the prefilled settings are fine for my configuration). You also might need to replace `2.4.2` with the current version of symfony.
 
 Don't forget to set the writing permissions to the cache and log directories.
 
@@ -168,4 +168,3 @@ xdebug.remote_enable=On
   [composer]: http://getcomposer.org
   [symfony]: http://symfony.com
   [xdebug]: http://xdebug.org
-
