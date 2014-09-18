@@ -13,9 +13,9 @@ Apples newest version of OS X ships with a newer, but still not the latest stabl
 
 ```sh
 $ php -v
-PHP 5.4.24 (cli) (built: Jan 19 2014 21:32:15)
-Copyright (c) 1997-2013 The PHP Group
-Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies
+PHP 5.4.30 (cli) (built: Jul 29 2014 23:43:29)
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.4.0, Copyright (c) 1998-2014 Zend Technologies
 ```
 
 We start again with [downloading the latest version of Xcode][xcode-appstore] from the Mac App Store.
@@ -59,7 +59,7 @@ To use `php.ini` we need to activate it through copying it to `/etc/php.ini`.
 $ sudo cp /etc/php.ini.default /etc/php.ini
 ```
 
-Now open the file in your favorite editor and add your timezone.
+Now open the file in your favorite editor, search for `date.timezone` and add your timezone.
 
 ```ini
 date.timezone = Europe/Berlin
@@ -80,7 +80,7 @@ $ mv composer.phar /usr/local/bin/composer
 Now get the latest Symfony version with:
 
 ```sh
-$ composer create-project symfony/framework-standard-edition symfony/ 2.4.2
+$ composer create-project symfony/framework-standard-edition symfony/ "2.5.*"
 ```
 
 Answer the questions you get asked accordingly to your configuration (I just press enter as the prefilled settings are fine for my configuration). You also might need to replace `2.4.2` with the current version of symfony.
