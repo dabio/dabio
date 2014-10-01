@@ -129,7 +129,7 @@ Now we are done and can start developing our next symfony application.
 
 ## Xdebug
 
-If you like to add [Xdebug support][http://xdebug.org], just add the following lines to your `/etc/php.ini` and restart your development server.
+If you like to add [Xdebug support](http://xdebug.org), just add the following lines to your `/etc/php.ini` and restart your development server.
 
 ```ini
 zend_extension=xdebug.so
