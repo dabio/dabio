@@ -52,7 +52,7 @@ Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
 We just need to move the configuration file to the right spot and update the timezone.
 
 ```bash
-sudo cp /etc/php.ini.default /etc/php.ini
+$ sudo cp /etc/php.ini.default /etc/php.ini
 ```
 
 Open the config file `/etc/php.ini`, find the line that sets your timezone and update it correspondingly.
@@ -65,3 +65,73 @@ Do not forget to remove the `;` at the beginning.
 
 ## Symfony
 
+We use [Composer](https://getcomposer.org) to install [Symfony](http://symfony.com).
+
+```bash
+$ cd
+$ curl -sS https://getcomposer.org/installer | php
+$ mv composer.phar /usr/local/bin/composer
+```
+
+Now we are ready to install [Symfony](http://symfony.com).
+
+```bash
+$ composer create-project symfony/framework-standard-edition symfony/ "2.5.*"
+```
+
+Answer the questions (I just press enter when asked) and set the the writing permissions to the `log/` and `cache/` directories.
+
+```bash
+$ cd symfony
+$ chmod 0777 app/{cache,logs}
+$ chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" app/{cache,logs}
+```
+
+Start the build-in webserver and open your browser at [localhost:8000/config.php](http://localhost:8000/config.php).
+
+```bash
+$ php app/console server:run
+```
+
+IMAGE HERE
+
+Great. Symfony now runs at your local machine. But Symfony recommends us to install _intl_ and a _PHP accelerator_. Stop your server with `ctrl+c`.
+
+Yosemite ships with OPcache, which just needs to get activated. Open `/etc/php.ini` and add `zend_extension=opcache.so`. Load the server again (`php app/console server:run`) and visit the [Symfony Configuration site](http://localhost:8000/config.php). Only one recommendation is left: _intl_.
+
+## Intl
+
+We want to install the `intl` extension with `pecl`. [PECL](http://pecl.php.net) is already shipped with Yosemite, but needs to get activated:
+
+```bash
+$ sudo php /usr/lib/php/install-pear-nozlib.phar
+$ pear config-set php_ini /private/etc/php.ini
+$ pecl config-set php_ini /private/etc/php.ini
+$ sudo pear upgrade-all
+$ sudo pear channel-update pear.php.net
+$ sudo pecl channel-update pecl.php.net
+```
+
+We need `autoconf` and `icu4c` for `intl`. Install them:
+
+```bash
+$ brew install autoconf icu4c
+$ sudo pecl install intl
+```
+
+When asked for the path to the ICO libraries and headers, answer with `/usr/local/opt/icu4c`.
+
+Start your Symfony server again `php app/console server:run` and head over to [localhost:8000/config.php](http://localhost:8000/config.php) to see if our warnings are gone.
+
+IMAGE HERE
+
+Now we are done and can start developing our next symfony application.
+
+## Xdebug
+
+If you like to add [Xdebug support][http://xdebug.org], just add the following lines to your `/etc/php.ini` and restart your development server.
+
+```ini
+zend_extension=xdebug.so
+xdebug.remote_enable=On
+```
