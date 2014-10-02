@@ -2,9 +2,12 @@
 layout: post
 title: "Getting Started with Symfony on Yosemite"
 date: 2014-10-01 14:37:56
+category: posts
 ---
 
 Apple just released the Golden Master of their newest OS X to registered beta users, which indicates that the public release of their system is just around the corner.
+
+![Fresh installed Yosemite](/images/blog/yosemite.png)
 
 I'll continue my series for giving you a step by step instruction to install [Symfony](http://symfony.com) on OS X 10.10.
 
@@ -93,7 +96,7 @@ Start the build-in webserver and open your browser at [localhost:8000/config.php
 $ php app/console server:run
 ```
 
-IMAGE HERE
+![Symfony is working!](/images/blog/yosemite-symfony-start.png)
 
 Great. Symfony now runs at your local machine. But Symfony recommends us to install _intl_ and a _PHP accelerator_. Stop your server with `ctrl+c`.
 
@@ -123,7 +126,7 @@ When asked for the path to the ICO libraries and headers, answer with `/usr/loca
 
 Start your Symfony server again `php app/console server:run` and head over to [localhost:8000/config.php](http://localhost:8000/config.php) to see if our warnings are gone.
 
-IMAGE HERE
+![Symfony works now with all requirements.](/images/blog/yosemite-symfony-success.png)
 
 Now we are done and can start developing our next symfony application.
 
@@ -135,3 +138,11 @@ If you like to add [Xdebug support](http://xdebug.org), just add the following l
 zend_extension=xdebug.so
 xdebug.remote_enable=On
 ```
+
+## Furter Readings
+
+If you need [mcrypt](http://mcrypt.sourceforge.net), I recommend to read my [guide on installing mcrypt on
+Mountain Lion]({% post_url 2013-10-02-install-mcrypt-on-mountain-lion %}). Just
+replace the PHP versions accordingly.
+
+
