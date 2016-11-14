@@ -1,0 +1,24 @@
+title: Danilo Braband
+url: "https://dab.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter: http://twitter.com/danilobraband
+github:  https://github.com/dabio
+permalink: /:slug.html
+google_analytics: UA-67221-16
+
+# Build settings
+markdown: kramdown
+sass:
+    style: compressed
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - Makefile
+  - README.md
+  - LICENSE.md
+  - vendor/
+
