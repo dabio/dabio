@@ -1,8 +1,11 @@
 #!/bin/sh
 
-.PHONY: clean install run uninstall
+.PHONY: build clean install run test uninstall
 
 default: run
+
+build: clean
+	@bundle exec jekyll build
 
 clean:
 	@rm -fr _site
@@ -20,6 +23,9 @@ install:
 
 run: clean
 	@bundle exec jekyll serve
+
+test: build
+	@bundle exec htmlproofer ./_site/ --disable-external
 
 uninstall: clean
 	@rm -fr vendor/ .bundle/
