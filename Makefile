@@ -25,7 +25,10 @@ run: clean
 	@bundle exec jekyll serve
 
 test: build
-	@bundle exec htmlproofer ./_site/ --disable-external
+	@bundle exec htmlproofer ./_site/ \
+		--disable-external \
+		--check-html \
+		--check-opengraph
 
 uninstall: clean
 	@rm -fr vendor/ .bundle/
