@@ -50,18 +50,12 @@ nav {
     float: right;
     margin-top: 0.67em;
 }
-nav svg {
-    width: 1.1rem;
-}
 nav a {
     margin-left: 1rem;
     text-decoration: none;
 }
 nav a span {
     display: none;
-}
-nav a path {
-    fill: #42464c;
 }
 nav a:hover path {
     fill: #000;
