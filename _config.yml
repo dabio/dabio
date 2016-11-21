@@ -1,6 +1,6 @@
 title: Danilo Braband
 url: "https://dab.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter: http://twitter.com/danilobraband
+twitter: https://twitter.com/danilobraband
 github:  https://github.com/dabio
 permalink: /:slug.html
 google_analytics: UA-67221-16
