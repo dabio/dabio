@@ -22,7 +22,7 @@ install:
 	@rm -fr vendor/bundle/ruby/*/gems/jekyll-*/lib/site_template
 
 run: clean
-	@bundle exec jekyll serve
+	@bundle exec jekyll serve --drafts
 
 test: build
 	@bundle exec htmlproofer ./_site/ \
