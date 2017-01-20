@@ -3,6 +3,11 @@ layout: post
 title: "Using Apache for Developing with Symfony"
 date: 2014-10-02 11:49
 redirect_from: "/posts/using-apache-for-developing-with-symfony.html"
+tags:
+    - symfony
+    - apache
+    - php
+    - localhost
 ---
 
 After [getting Symfony to work]({% post_url 2014-10-01-getting-started-with-symfony-on-yosemite %}), we might want to switch away from the build in PHP web server, to a more reliable one. I'll use the [Apache server](http://httpd.apache.org) because it comes with the latest OS X version.

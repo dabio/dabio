@@ -3,4 +3,12 @@ layout: default
 ---
 <h1>{{ page.title }}</h1>
 {{ content }}
-<time datetime="{{ page.date | date_to_xmlschema }}">— {{ page.date | date: "%e %B %Y" }}</time>
+
+<footer>
+  <time datetime="{{ page.date | date_to_xmlschema }}">— {{ page.date | date: "%e %B %Y" }}</time>
+  <ul class="tags">
+    {% for tag in page.tags %}
+    <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+</footer>
