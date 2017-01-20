@@ -2,6 +2,10 @@
 layout: post
 title: "Run gvt on Heroku"
 date: 2017-01-12 07:00
+tags:
+    - heroku
+    - gvt
+    - golang
 ---
 Currently [gvt][gvt] is not on the [list of supported dependency managers][heroku-go] for using [Go] on [Heroku][heroku]. Follow the basic rules to make your project appear to be a [gb][gb] project to get gvt projects running on Heroku.
 
