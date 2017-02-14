@@ -3,6 +3,10 @@ layout: post
 title: "Getting Started with Symfony on Yosemite"
 date: 2014-10-01 14:37:56
 redirect_from: "/posts//getting-started-with-symfony-on-yosemite.html"
+tags:
+    - symfony
+    - macOS
+    - homebrew
 ---
 
 Apple just released the Golden Master of their newest OS X to registered beta users, which indicates that the public release of their system is just around the corner.

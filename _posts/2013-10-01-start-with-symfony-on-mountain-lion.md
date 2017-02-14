@@ -3,6 +3,10 @@ layout: post
 title: "Start with Symfony on Mountain Lion"
 date: 2013-10-01 22:43
 redirect_from: "/posts/start-with-symfony-on-mountain-lion.html"
+tags:
+    - homebrew
+    - macOS
+    - symfony
 ---
 Start developing [Symfony](http://symfony.com/) on a Mac is quite easy. Mountain Lion ships with some of the required libraries, but a few are hidden in the depth of the system.
 

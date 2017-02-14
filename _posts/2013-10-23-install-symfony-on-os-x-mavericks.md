@@ -3,6 +3,10 @@ layout: post
 title: "Install Symfony on OS X Mavericks"
 date: 2013-10-23 17:59:56
 redirect_from: "/posts/install-symfony-on-os-x-mavericks.html"
+tags:
+    - symfony
+    - macOS
+    - homebrew
 ---
 
 [Mavericks](http://www.apple.com/osx/) is out and my manual for [getting Symfony to run on Mountain Lion]({% post_url 2013-10-01-start-with-symfony-on-mountain-lion %}) is already outdated. This guide is an update to the old manual.

@@ -3,6 +3,9 @@ layout: post
 title: "Install mcrypt on Mountain Lion"
 date: 2013-10-02 14:16
 redirect_from: "/posts/install-mcrypt-on-mountain-lion.html"
+tags:
+    - php
+    - mcrypt
 ---
 
 After following my last tutorial about [starting with Symfony on a new Mac]({% post_url 2013-10-01-start-with-symfony-on-mountain-lion %}), you might struggle with an extension, a few bundles need: [mcrypt](http://mcrypt.sourceforge.net).
