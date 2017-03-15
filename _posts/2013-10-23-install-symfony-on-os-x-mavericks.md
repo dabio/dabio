@@ -2,7 +2,6 @@
 layout: post
 title: "Install Symfony on OS X Mavericks"
 date: 2013-10-23 17:59:56
-redirect_from: "/posts/install-symfony-on-os-x-mavericks.html"
 tags:
     - symfony
     - macOS

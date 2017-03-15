@@ -2,7 +2,6 @@
 layout: post
 title: "Getting Started with Symfony on Yosemite"
 date: 2014-10-01 14:37:56
-redirect_from: "/posts//getting-started-with-symfony-on-yosemite.html"
 tags:
     - symfony
     - macOS
@@ -51,7 +50,7 @@ Yosemite ships with [PHP](http://php.net).
 
 ```bash
 $ php -v
-PHP 5.5.14 (cli) (built: Sep  9 2014 19:09:25) 
+PHP 5.5.14 (cli) (built: Sep  9 2014 19:09:25)
 Copyright (c) 1997-2014 The PHP Group
 Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
 ```

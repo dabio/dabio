@@ -2,7 +2,6 @@
 layout: post
 title: "Install mcrypt on Mountain Lion"
 date: 2013-10-02 14:16
-redirect_from: "/posts/install-mcrypt-on-mountain-lion.html"
 tags:
     - php
     - mcrypt

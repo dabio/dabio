@@ -2,7 +2,6 @@
 layout: post
 title: "Using Apache for Developing with Symfony"
 date: 2014-10-02 11:49
-redirect_from: "/posts/using-apache-for-developing-with-symfony.html"
 tags:
     - symfony
     - apache

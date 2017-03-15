@@ -12,6 +12,7 @@ clean:
 
 install:
 	@echo "Installing gems…"
+	@bundle config build.nokogiri --use-system-libraries
 	@bundle install \
 		--binstubs vendor/bundle/bin \
 		--path vendor/bundle \

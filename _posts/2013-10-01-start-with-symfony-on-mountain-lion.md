@@ -2,7 +2,6 @@
 layout: post
 title: "Start with Symfony on Mountain Lion"
 date: 2013-10-01 22:43
-redirect_from: "/posts/start-with-symfony-on-mountain-lion.html"
 tags:
     - homebrew
     - macOS

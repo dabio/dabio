@@ -1,0 +1,62 @@
+{
+    "hosting": {
+        "public": "_site",
+        "redirects": [
+            {
+                "destination": "/",
+                "source": "/posts.html",
+                "type": 301
+            },
+            {
+                "destination": "/",
+                "source": "/projects.html",
+                "type": 301
+            },
+            {
+                "destination": "/",
+                "source": "/projects/*",
+                "type": 301
+            },
+            {
+                "destination": "/",
+                "source": "/talks.html",
+                "type": 301
+            },
+            {
+                "destination": "/",
+                "source": "/talks/*",
+                "type": 301
+            },
+            {
+                "destination": "/",
+                "source": "/fujifilm.html",
+                "type": 301
+            },
+            {
+                "destination": "/start-with-symfony-on-mountain-lion.html",
+                "source": "/posts/start-with-symfony-on-mountain-lion.html",
+                "type": 301
+            },
+            {
+                "destination": "/install-mcrypt-on-mountain-lion.html",
+                "source": "/posts/install-mcrypt-on-mountain-lion.html",
+                "type": 301
+            },
+            {
+                "destination": "/install-symfony-on-os-x-mavericks.html",
+                "source": "/posts/install-symfony-on-os-x-mavericks.html",
+                "type": 301
+            },
+            {
+                "destination": "/getting-started-with-symfony-on-yosemite.html",
+                "source": "/posts/getting-started-with-symfony-on-yosemite.html",
+                "type": 301
+            },
+            {
+                "destination": "/using-apache-for-developing-with-symfony.html",
+                "source": "/posts/using-apache-for-developing-with-symfony.html",
+                "type": 301
+            }
+        ]
+    }
+}

@@ -29,7 +29,7 @@ dan@case ~/g/s/g/d/go-gvt> tree
 
 A `src/[dir]/` directory with your go files and a static link inside the `vendor/` folder are required. Heroku will detect a [gb][gb] project, build and run your app on their platform.
 
-Find an [example project on GitHub][go-gvt]. 
+Find an [example project on GitHub][go-gvt].
 
  [gvt]: https://github.com/FiloSottile/gvt "gvt is the go vendoring tool for the GO15VENDOREXPERIMENT"
  [heroku-go]: https://devcenter.heroku.com/articles/go-support#supported-dependency-vendor-managers "Supported Dependency/Vendor Managers"
