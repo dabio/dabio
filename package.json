@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "firebase-tools": "^3.5.0"
+  },
+  "scripts": {
+    "deploy": "firebase --token \"$FIREBASE_TOKEN\" deploy"
   }
 }
