@@ -20,7 +20,7 @@
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   ga('create', '{{ include.tracking_id }}', 'auto');
   ga('set', 'transport', 'beacon');
-  //ga('set', dimensions.TRACKING_VERSION, '{{ site.data['hash'] }}');
+  ga('set', dimensions.TRACKING_VERSION, '{{ site.data['commits'] }}');
   ga(function(tracker) {
     tracker.set(dimensions.CLIENT_ID, tracker.get('clientId'));
 
