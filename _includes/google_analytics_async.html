@@ -21,6 +21,7 @@
   ga('create', '{{ include.tracking_id }}', 'auto');
   ga('set', 'transport', 'beacon');
   ga('set', dimensions.TRACKING_VERSION, '{{ site.data['commits'] }}');
+  ga('set', dimensions.WINDOW_ID, uuid());
   ga(function(tracker) {
     tracker.set(dimensions.CLIENT_ID, tracker.get('clientId'));
 
