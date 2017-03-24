@@ -1,5 +1,5 @@
 <script>
-  const dimensions = {
+/*  const dimensions = {
       TRACKING_VERSION: 'dimension1',
       CLIENT_ID: 'dimension2',
       WINDOW_ID: 'dimension3',
@@ -16,11 +16,11 @@
       return a ? (a ^ Math.random() * 16 >> a / 4).toString(16) :
         ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, b);
     };
-
+*/
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', '{{ include.tracking_id }}', 'auto');
+  ga('create', '{{ include.tracking_id }}', {'siteSpeedSampleRate': 100});
   ga('set', 'transport', 'beacon');
-  ga('set', dimensions.TRACKING_VERSION, '{{ site.data['commits'] }}');
+/*  ga('set', dimensions.TRACKING_VERSION, '{{ site.data['commits'] }}');
   ga('set', dimensions.WINDOW_ID, uuid());
   ga(function(tracker) {
     tracker.set(dimensions.CLIENT_ID, tracker.get('clientId'));
@@ -34,8 +34,8 @@
       hitTask(model);
     });
   });
-  ga('send', 'pageview');
-
+*/  ga('send', 'pageview');
+/*
   const sendNavigationTimingMetrics = function() {
     // only for supported browsers
     if (!(window.performance && window.performance.timing)) return;
@@ -68,5 +68,6 @@
       }
   };
   sendNavigationTimingMetrics();
+*/
 </script>
 <script async src='//www.google-analytics.com/analytics.js'></script>
