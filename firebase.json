@@ -1,6 +1,17 @@
 {
     "hosting": {
         "public": "_site",
+        "headers": [
+            {
+                "source": "/css/*.css",
+                "headers": [
+                    {
+                        "key": "Cache-Control",
+                        "value": "max-age=30758400"
+                    }
+                ]
+            }
+        ],
         "redirects": [
             {
                 "destination": "/",
