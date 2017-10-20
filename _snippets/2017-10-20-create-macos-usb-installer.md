@@ -1,30 +1,29 @@
 ---
 layout: snippet
-title: "Create macOS High Sierra USB Installer"
+title: "Check if File or Directory Exists"
 tags:
-    - macOS
-    - usb
-    - installer
+    - bash
+    - terminal
 ---
 
-[Download the official image][app-store] from the app store and quit the installer.
-
-Open your terminal and type the following command to create the usb. Use the name of your usb.
+For files:
 
 ```bash
-$ sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia \
-    --volume /Volumes/[volume]
-Password:
-Ready to start.
-To continue we need to erase the volume at /Volumes/[volume].
-If you wish to continue type (Y) then press return: Y
-Erasing Disk: 0%... 10%... 20%... 30%...100%...
-Copying installer files to disk...
-Copy complete.
-Making disk bootable...
-Copying boot files...
-Copy complete.
-Done.
+#!/usr/bin/env bash
+if [ -e x.txt ]; then
+    echo "file exists"
+else
+    echo "file is missing"
+fi
 ```
 
-  [app-store]: https://itunes.apple.com/app/macos-high-sierra/id1246284741?mt=12
+For directories:
+
+```bash
+#!/usr/bin/env bash
+if [ -d "dir" ]; then
+    echo "dir exists"
+else
+    echo "dir is missing"
+fi
+```
