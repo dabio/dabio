@@ -50,10 +50,12 @@ header h1 {
 header .tld {
     color: $oc-gray-5;
 }
-h1 a, h2 a {
+h1 a,
+h2 a {
     color: $header-color;
 }
-h1 a:hover, h2 a:hover {
+h1 a:hover,
+h2 a:hover {
     color: #000;
     text-decoration: underline;
 }
@@ -78,6 +80,12 @@ h1, h2, h3, h4 {
 }
 h1 a, h2 a, h3 a, h4 a {
     text-decoration: none;
+}
+hr {
+  background: $oc-gray-2;
+  border: 0;
+  height: 1px;
+  margin: 2.5rem 0;
 }
 pre {
     overflow: scroll;
