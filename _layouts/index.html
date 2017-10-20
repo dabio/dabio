@@ -6,3 +6,14 @@ layout: default
   {{ post.excerpt }}
 {% endfor %}
 
+<hr/>
+
+<h2>Snippets</h2>
+
+<p>Snippets are collections of code and terminal commands that I use regulary. I put them here so I don't forget them.</p>
+
+<ul>
+{% for snippet in site.snippets %}
+  <li><a href="{{ snippet.url }}" title="{{ snippet.title }}">{{ snippet.title }}</a></li>
+{% endfor %}
+</ul>

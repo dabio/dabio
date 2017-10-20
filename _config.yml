@@ -5,6 +5,11 @@ github:  https://github.com/dabio
 permalink: /:slug.html
 google_analytics: UA-67221-16
 
+collections:
+  snippets:
+    output: true
+    permalink: /:slug.html
+
 # Build settings
 markdown: kramdown
 sass:
