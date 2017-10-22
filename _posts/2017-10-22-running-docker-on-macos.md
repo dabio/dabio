@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "Running Docker on macOS"
-date: 2017-10-22 20:55
+date: 2017-10-22 19:55
 tags:
     - bash
     - docker
     - dlite
 ---
-
 I use the [docker][docker]+[dlite][dlite] method, which is fast and works fine for me. I haven't tried the official [macOS binaries][docker-mac] yet.
 
 ```bash
