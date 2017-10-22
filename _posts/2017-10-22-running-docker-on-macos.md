@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running Docker on macOS"
-date: 2017-10-22 19:55
+date: 2017-10-22 12:55
 tags:
     - bash
     - docker
