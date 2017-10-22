@@ -10,11 +10,11 @@ tags:
 ### Fish shell
 
 ```bash
-$ docker rmi (docker images -a -q)
+$ docker rmi -f (docker images -a -q)
 ```
 
 ### Bash
 
 ```bash
-$ docker rmi $(docker images -a -q)
+$ docker rmi -f $(docker images -a -q)
 ```
