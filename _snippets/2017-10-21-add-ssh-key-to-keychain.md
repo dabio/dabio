@@ -10,3 +10,12 @@ tags:
 ```bash
 ssh-add -K ~/.ssh/id_rsa
 ```
+
+Add this to your `~/.ssh/config` file:
+
+```
+Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
+```
