@@ -21,7 +21,7 @@ If connecting is not working, reinstalling did the thing.
 ```bash
 $ dlite stop
 $ sudo dlite uninstall
-$ rm /var/run/docker.sock
+$ sudo rm /var/run/docker.sock
 ```
 
 Connection should be fine now.
