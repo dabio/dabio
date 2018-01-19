@@ -9,6 +9,8 @@ tags:
 ---
 I use the [docker][docker]+[dlite][dlite] method, which is fast and works fine for me. I haven't tried the official [macOS binaries][docker-mac] yet.
 
+_This manual is outdated. See the [latest version for getting docker up and running]({% post_url 2018-01-19-docker-on-macos %})._
+
 ```bash
 $ brew install docker dlite
 $ sudo dlite install

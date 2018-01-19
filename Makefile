@@ -12,7 +12,11 @@ clean:
 
 install:
 	@echo "Installing gems…"
-	@bundle config build.nokogiri --use-system-libraries
+	@bundle config build.nokogiri \
+	    --use-system-libraries \
+	    --with-xml2-include=/usr/include/libxml2 \
+	    --with-libxslt-include=/usr/include/libxslt
+	    #--with-xml2-lib=/usr/lib
 	@bundle install \
 		--binstubs vendor/bundle/bin \
 		--path vendor/bundle \
