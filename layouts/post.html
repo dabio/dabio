@@ -1,0 +1,9 @@
+<% render '/default.*' do %>
+  <h1><%= item[:title] %></h1>
+  <%= yield %>
+
+  <footer>
+    <time datetime="<%= item[:created_at] %>">— <%= item[:created_at] %></time>
+    <div class="tags"><%= tags_for(item) %></div>
+  </footer>
+<% end %>

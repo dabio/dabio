@@ -1,0 +1,60 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    adsf (1.4.1)
+      rack (>= 1.0.0, < 3.0.0)
+    colored (1.2)
+    concurrent-ruby (1.0.5)
+    cri (2.10.1)
+      colored (~> 1.2)
+    ddmemoize (1.0.0)
+      ddmetrics (~> 1.0)
+      ref (~> 2.0)
+    ddmetrics (1.0.0)
+    ddplugin (1.0.2)
+    ffi (1.9.23)
+    hamster (3.0.0)
+      concurrent-ruby (~> 1.0)
+    kramdown (1.16.2)
+    nanoc (4.9.2)
+      addressable (~> 2.5)
+      cri (~> 2.8)
+      ddmemoize (~> 1.0)
+      ddmetrics (~> 1.0)
+      ddplugin (~> 1.0)
+      hamster (~> 3.0)
+      parallel (~> 1.12)
+      ref (~> 2.0)
+      slow_enumerator_tools (~> 1.0)
+      tomlrb (~> 1.2)
+    parallel (1.12.1)
+    public_suffix (3.0.2)
+    rack (2.0.4)
+    rb-fsevent (0.10.3)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
+    ref (2.0.0)
+    sass (3.5.6)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    slow_enumerator_tools (1.1.0)
+    tomlrb (1.2.6)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf (~> 1.4)
+  kramdown (~> 1.16)
+  nanoc (~> 4.9)
+  sass (~> 3.5)
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.16.1

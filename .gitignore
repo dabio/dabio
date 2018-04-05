@@ -1,0 +1,7 @@
+.sass-cache
+
+/.bundle/
+/vendor/bundle
+/output/
+/tmp/
+/crash.log
