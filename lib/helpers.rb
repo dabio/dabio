@@ -10,3 +10,11 @@ def fingerprint(pattern)
   end
   Digest::SHA1.hexdigest(contents.join(''))[0..5]
 end
+
+def format_date(date_str, format='%Y-%m-%d')
+  DateTime.parse(date_str).strftime(format)
+end
+
+def date_to_xmlschema(date_str)
+  DateTime.parse(date_str).xmlschema
+end
