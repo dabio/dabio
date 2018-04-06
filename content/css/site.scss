@@ -88,8 +88,9 @@ hr {
   margin: 2.5rem 0;
 }
 pre {
-    overflow: scroll;
-    padding: .8em;
+  background: $code-background;
+  overflow: scroll;
+  padding: .8em;
 }
 footer {
   position: relative;

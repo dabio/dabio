@@ -7,24 +7,25 @@ tags:
     - docker
     - dlite
 ---
+
 I use the [docker][docker]+[dlite][dlite] method, which is fast and works fine for me. I haven't tried the official [macOS binaries][docker-mac] yet.
 
 _This manual is outdated. See the <%= link_to('latest version for getting docker up and running', @items['/*/2018-01-19-docker-on-macos.*']) %>._
 
-```bash
+~~~ bash
 $ brew install docker dlite
 $ sudo dlite install
 $ dlite start
 $ ssh docker@local.docker
-```
+~~~
 
 If connecting is not working, reinstalling did the thing.
 
-```bash
+~~~ bash
 $ dlite stop
 $ sudo dlite uninstall
 $ sudo rm /var/run/docker.sock
-```
+~~~
 
 Connection should be fine now.
 
