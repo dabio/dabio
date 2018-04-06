@@ -7,7 +7,7 @@ tags:
     - docker
     - dlite
 ---
-This is an update to a [former description]({% post_url 2017-10-22-running-docker-on-macos %}) of how to get docker up and running with decent speed for local development.
+This is an update to a <%= link_to('former description', @items['/*/2017-10-22-running-docker-on-macos.*']) %> of how to get docker up and running with decent speed for local development.
 
 ## Remove Outdated Installation
 

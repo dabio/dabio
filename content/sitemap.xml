@@ -1,0 +1,3 @@
+<%= xml_sitemap(
+  items: items.select {|i| i.path.is_a?(String) && !i[:is_hidden] && i.path.end_with?('.html')}
+) %>

@@ -1,39 +1,38 @@
-#!/bin/sh
+.PHONY: build clean install serve test
 
-.PHONY: build clean install run test uninstall
+all: build
 
-default: run
-
-build: clean
-	@bundle exec jekyll build
+build:
+	bundle exec nanoc
 
 clean:
-	@rm -fr _site
+	rm -r tmp/ output/ vendor/bundle/
 
 install:
-	@echo "Installing gems…"
 	@bundle config build.nokogiri \
-	    --use-system-libraries \
-	    --with-xml2-include=/usr/include/libxml2 \
-	    --with-libxslt-include=/usr/include/libxslt
-	    #--with-xml2-lib=/usr/lib
-	@bundle install \
-		--binstubs vendor/bundle/bin \
-		--path vendor/bundle \
+		--use-system-libraries \
+		--with-xml2-include=/usr/include/libxml2 \
+		--with-libxslt-include=/usr/include/libxslt
+		#--with-xml2-lib=/usr/lib
+	bundle install \
 		--jobs 4 \
-		--without production
-	@echo "Removing jekyll templates…"
-	@rm -fr vendor/bundle/ruby/*/gems/jekyll-*/spec/fixtures
-	@rm -fr vendor/bundle/ruby/*/gems/jekyll-*/lib/site_template
+		--path vendor/bundle
 
-run: clean
-	@bundle exec jekyll serve --drafts
+serve:
+	bundle exec nanoc view
 
 test: build
-	@bundle exec htmlproofer ./_site/ \
-		--disable-external \
-		--check-html \
-		--check-opengraph
+	# Not using css validator, because css3 is the default validation option,
+	# but we need css3svg.
+	#bundle exec nanoc check --all
+	bundle exec nanoc check external_links html internal_links mixed_content stale
 
-uninstall: clean
-	@rm -fr vendor/ .bundle/
+watch: build
+	@fswatch \
+		-0 \
+		-i "content/" \
+		-i "Rules" \
+		-i "lib/" \
+		-i "layouts/" \
+		-e ".*" \
+		. | xargs -0 -I{} -n1 make build

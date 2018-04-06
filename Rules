@@ -2,14 +2,15 @@
 
 ignore '/**/_*'
 
-compile '/index.md' do
+compile '/*.md' do
   filter :erb
   filter :kramdown
   layout '/default.*'
-  write '/index.html'
+  write item.identifier.without_ext + '.html'
 end
 
 compile '/posts/*.md' do
+  filter :erb
   filter :kramdown
   layout '/post.*'
   write item
@@ -21,6 +22,16 @@ end
 compile '/css/*.scss' do
   filter :sass, syntax: :scss, style: :compact
   write [item.identifier.without_ext, '-', fingerprint('/css/site.*'), '.css'].join
+end
+
+compile '/sitemap.xml' do
+  filter :erb
+  write item.identifier.to_s
+end
+
+compile '/robots.txt' do
+  filter :erb
+  write item.identifier.to_s
 end
 
 compile '/**/*' do
