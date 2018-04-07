@@ -2,7 +2,6 @@
   <h1><%= item[:title] %></h1>
   <%= yield %>
   <footer>
-    <time datetime="<%= date_to_xmlschema(item[:created_at]) %>">— <%= format_date(item[:created_at], '%e %B %Y') %></time>
     <div class="tags"><%= tags_for(item) %></div>
   </footer>
 <% end %>

@@ -20,6 +20,17 @@ compile '/posts/*.md' do
     .gsub(%r<posts/[0-9]{4}\-[0-9]{2}\-[0-9]{2}\->, '') + '.html'
 end
 
+compile '/snippets/*.md' do
+  filter :erb
+  filter :kramdown
+  filter :colorize_syntax, default_colorizer: :rouge
+  layout '/snippet.*'
+  write item
+    .identifier
+    .without_ext
+    .gsub(%r<snippets/[0-9]{4}\-[0-9]{2}\-[0-9]{2}\->, '') + '.html'
+end
+
 compile '/css/*.scss' do
   filter :sass, syntax: :scss, style: :compact
   write [item.identifier.without_ext, '-', fingerprint('/css/site.*'), '.css'].join
