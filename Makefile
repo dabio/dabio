@@ -25,7 +25,7 @@ test: build
 	# Not using css validator, because css3 is the default validation option,
 	# but we need css3svg.
 	#bundle exec nanoc check --all
-	bundle exec nanoc check external_links html internal_links mixed_content stale
+	bundle exec nanoc check html internal_links mixed_content stale
 
 watch: build
 	@fswatch \
