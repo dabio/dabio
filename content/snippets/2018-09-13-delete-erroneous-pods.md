@@ -1,5 +1,5 @@
 ---
-title: "Restart Kubernetes Pod"
+title: "Delete Erroneuos Kubernetes Pods"
 created_at: 2018-09-13
 kind: article
 tags:
