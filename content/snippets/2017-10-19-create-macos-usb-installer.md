@@ -1,11 +1,13 @@
 ---
-title: "Create macOS High Sierra USB Installer"
+title: "Create macOS Mojave USB Installer"
 created_at: 2017-10-19
 kind: article
 tags:
     - macOS
     - usb
     - installer
+    - high sierra
+    - mojave
 ---
 
 [Download the official image][app-store] from the app store and quit the installer.
@@ -13,19 +15,17 @@ tags:
 Open your terminal and type the following command to create the usb. Use the name of your usb.
 
 ~~~bash
-$ sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia \
+$ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia \
     --volume /Volumes/[volume]
 Password:
 Ready to start.
-To continue we need to erase the volume at /Volumes/[volume].
+To continue we need to erase the volume at /Volumes/Install macOS High Sierra.
 If you wish to continue type (Y) then press return: Y
-Erasing Disk: 0%... 10%... 20%... 30%...100%...
-Copying installer files to disk...
-Copy complete.
+Erasing disk: 0%... 10%... 20%... 30%... 100%
+Copying to disk: 0%... 10%... 20%... 30%... 40%... 50%... 60%... 70%... 80%... 90%... 100%
 Making disk bootable...
 Copying boot files...
-Copy complete.
-Done.
+Install media now available at "/Volumes/Install macOS Mojave"
 ~~~
 
-  [app-store]: https://itunes.apple.com/app/macos-high-sierra/id1246284741?mt=12
+  [app-store]: https://itunes.apple.com/app/macos-mojave/id1398502828?ls=1&mt=12
