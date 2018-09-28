@@ -8,6 +8,9 @@ build:
 clean:
 	rm -r tmp/ output/ vendor/bundle/
 
+deploy:
+	bundle exec nanoc deploy
+
 install:
 	@bundle config build.nokogiri \
 		--use-system-libraries \
