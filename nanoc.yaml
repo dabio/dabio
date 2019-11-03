@@ -12,8 +12,3 @@ data_sources:
     encoding: utf-8
 
 base_url: https://dab.io
-
-deploy:
-  default:
-    kind: git
-    branch: gh-pages
