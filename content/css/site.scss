@@ -8,78 +8,88 @@
 @import "open-color";
 @import "pygments";
 
+$font-serif: Georgia, Cambria, "Times New Roman", Times, serif;;
+$font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+// bright
 $color: $oc-gray-8;
 $background: $oc-white;
 $selection-color: $oc-gray-2;
 $header-color: $oc-gray-7;
-$font-serif: Georgia, Cambria, "Times New Roman", Times, serif;;
-$font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 $code-background: $oc-gray-0;
 
+// dark
+$dark-color: $oc-gray-0;
+$dark-background: $oc-gray-9;
+$dark-selection-color: $oc-gray-7;
+$dark-header-color: $oc-gray-5;
+$dark-code-background: $oc-gray-8;
+
 html{
-    font: normal normal 105%/1.6 serif;
-    color: $color;
-    background: $background;
+  font: normal normal 105%/1.6 serif;
+  color: $color;
+  background: $background;
 }
 ::selection {
   background: $selection-color;
 }
 a {
-    transition: color 0.1s linear;
+  color: $oc-indigo-9;
+  transition: color 0.1s linear;
 }
 body {
-    padding: 0 .7rem;
+  padding: 0 .7rem;
 }
 article {
-    font-family: $font-serif;
-    max-width: 40rem;
-    margin: 0 auto 10rem;
-    padding: 1.5rem 0;
+  font-family: $font-serif;
+  max-width: 40rem;
+  margin: 0 auto 10rem;
+  padding: 1.5rem 0;
 }
 header {
-    max-width: 40rem;
-    margin: 5rem auto 0;
-    overflow: auto;
-    padding: .5rem 0;
+  max-width: 40rem;
+  margin: 5rem auto 0;
+  overflow: auto;
+  padding: .5rem 0;
 }
 header h1 {
-    float: left;
-    font-size: 100%;
-    font-weight: 100;
+  float: left;
+  font-size: 100%;
+  font-weight: 100;
 }
 header .tld {
-    color: $oc-gray-5;
+  color: $oc-gray-5;
 }
 h1 a,
 h2 a {
-    color: $header-color;
+  color: $header-color;
 }
 h1 a:hover,
 h2 a:hover {
-    color: #000;
-    text-decoration: underline;
+  color: $oc-gray-9;
+  text-decoration: underline;
 }
 nav {
-    float: right;
-    margin-top: 0.67em;
+  float: right;
+  margin-top: 0.67em;
 }
 nav a {
-    margin-left: 1rem;
-    text-decoration: none;
+  margin-left: 1rem;
+  text-decoration: none;
 }
 nav a span {
-    display: none;
+  display: none;
 }
 nav a:hover path {
-    fill: #000;
+  fill: $oc-gray-9;
 }
 h1, h2, h3, h4 {
   color: $header-color;
-    font-family: $font-sans-serif;
-    font-weight: 300;
+  font-family: $font-sans-serif;
+  font-weight: 300;
 }
 h1 a, h2 a, h3 a, h4 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 hr {
   background: $oc-gray-2;
@@ -110,5 +120,48 @@ time {
   right: 0;
 }
 .highlight {
-    background: $code-background;
+  background: $code-background;
+}
+
+@media (prefers-color-scheme: dark) {
+  html{
+    color: $dark-color;
+    background: $dark-background;
+  }
+  ::selection {
+    background: $dark-selection-color;
+  }
+  a {
+    color: $oc-indigo-4;
+  }
+  nav a:hover path {
+    fill: $oc-gray-0;
+  }
+  h1, h2, h3, h4 {
+    color: $dark-header-color;
+  }
+  h1 a,
+  h2 a {
+      color: $dark-header-color;
+  }
+  h1 a:hover,
+  h2 a:hover {
+      color: $dark-color;
+  }
+  hr {
+    background: $oc-gray-6;
+  }
+  pre {
+    background: $dark-code-background;
+  }
+  .highlight {
+    background: $dark-code-background;
+  }
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
 }
