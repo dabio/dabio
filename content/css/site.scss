@@ -165,3 +165,13 @@ time {
     opacity: 1;
   }
 }
+@media only screen and (max-device-width : 667px) {
+  header {
+    margin: 1rem auto 0;
+  }
+}
+@media only screen and (max-device-width : 1024px) {
+  header {
+    margin: 3rem auto 0;
+  }
+}
